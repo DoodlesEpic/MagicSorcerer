@@ -5,6 +5,7 @@ import cors from "cors";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 import yup from "yup";
+import morgan from "morgan";
 
 dotenv.config();
 
@@ -41,6 +42,7 @@ const schema = yup.object().shape({
   prompt: yup.string().min(100).max(10000).required(),
 });
 
+app.use(morgan("combined")); // logs HTTP requests to stdout
 app.use(helmet());
 app.use("/api", rateLimiter);
 app.use(cors());
@@ -74,7 +76,7 @@ app.post("/api/v1/completions", noSpam, async (req, res) => {
     const completion = data.choices[0].text;
     res.send({ completion });
   } catch (error) {
-    return res.status(400).error({
+    return res.status(400).send({
       error: error.message[0].toUpperCase() + error.message.slice(1),
     });
   }

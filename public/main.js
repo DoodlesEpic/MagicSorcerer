@@ -12,7 +12,7 @@ form.addEventListener("submit", async (event) => {
   responseDiv.innerHTML = response;
 });
 
-async function generateResponse(model, prompt) {
+async function generateResponse(model, apiKey, prompt) {
   const response = await fetch("https://api.openai.com/v1/completions", {
     method: "POST",
     headers: {

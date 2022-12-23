@@ -4,24 +4,24 @@ Welcome to Magic the Gathering Sorcerer! Our AI-powered tool is designed to help
 
 ## How to use
 
-    Input your Magic the Gathering decklist in the provided field. Make sure to include all cards, including lands.
-    Select the OpenAI model you want to use for generating suggestions. We offer several options to choose from, each with a different style and level of technicality.
-    Click "Generate response" to receive your suggestions.
+Input your Magic the Gathering decklist in the provided field. Make sure to include all cards, including lands.
+Select the OpenAI model you want to use for generating suggestions. We offer several options to choose from, each with a different style and level of technicality.
+Click "Generate response" to receive your suggestions.
 
 ## Features
 
-    AI-powered suggestions for improving your Magic the Gathering decklist
-    Multiple OpenAI models to choose from, each with a unique writing style
-    Easy to use interface, perfect for Magic the Gathering players of all skill levels
+AI-powered suggestions for improving your Magic the Gathering decklist
+Multiple OpenAI models to choose from, each with a unique writing style
+Easy to use interface, perfect for Magic the Gathering players of all skill levels
 
 ## Requirements
 
-    Internet connection
-    OpenAI API key (sign up for one at https://beta.openai.com/)
+Internet connection
+OpenAI API key (sign up for one at https://beta.openai.com/)
 
 ## Technologies Used
 
-    Node.js
-    Express
-    OpenAI API
-    HTML/CSS/JavaScript
+Node.js
+Express
+OpenAI API
+HTML/CSS/JavaScript

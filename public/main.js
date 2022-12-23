@@ -25,5 +25,5 @@ async function generateResponse(model, prompt) {
 
   const data = await response.json();
   if (data.error) return data.error;
-  return data.completion;
+  return data.completion.replace(/^\d+[. ]/gm, "<br>$&");
 }

@@ -20,9 +20,9 @@ const rateLimiter = rateLimit({
   message: "Too many requests, please try again later",
 });
 
-// Limit requests to once every 30 seconds
+// Limit requests to once every 10 seconds
 const noSpam = rateLimit({
-  windowMs: 1 * 1000, // 30 seconds
+  windowMs: 10 * 1000, // 10 seconds
   max: 1,
   message: "Too many requests, please try again later",
 });
@@ -74,11 +74,9 @@ app.post("/api/v1/completions", noSpam, async (req, res) => {
     const completion = data.choices[0].text;
     res.send({ completion });
   } catch (error) {
-    return res
-      .status(400)
-      .error({
-        error: error.message[0].toUpperCase() + error.message.slice(1),
-      });
+    return res.status(400).error({
+      error: error.message[0].toUpperCase() + error.message.slice(1),
+    });
   }
 });
 

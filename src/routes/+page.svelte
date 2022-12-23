@@ -5,11 +5,6 @@
 	export let form: ActionData;
 </script>
 
-<nav class="navbar sticky-top bg-body shadow-sm">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="/">MTG Sorcerer</a>
-	</div>
-</nav>
 <main class="container mt-5">
 	<section class="mb-3">
 		<p>

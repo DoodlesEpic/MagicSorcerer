@@ -1,12 +1,29 @@
 import { fail } from '@sveltejs/kit';
 import type { Actions } from './$types';
 import { API_KEY } from '$env/static/private';
+import validator from 'validator';
 
 export const actions: Actions = {
 	default: async ({ request }) => {
 		const formData = await request.formData();
-		const model = formData.get('model');
-		const decklist = formData.get('decklist');
+		const model: string = validator.trim(formData.get('model') as string);
+		const decklist: string = validator.trim(formData.get('decklist') as string);
+
+		if (!validator.isLength(decklist, { min: 100, max: 10000 })) {
+			return fail(400, { error: 'Insert a valid decklist' });
+		}
+
+		if (
+			!validator.isIn(model, [
+				'ada',
+				'text-babbage-001',
+				'text-babbage-002',
+				'text-curie-001',
+				'text-davinci-002'
+			])
+		) {
+			return fail(400, { error: 'Choose a valid model' });
+		}
 
 		const response = await fetch('https://api.openai.com/v1/completions', {
 			method: 'POST',

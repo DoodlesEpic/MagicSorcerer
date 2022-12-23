@@ -19,7 +19,7 @@ export const actions: Actions = {
 				'text-babbage-001',
 				'text-babbage-002',
 				'text-curie-001',
-				'text-davinci-002'
+				'text-davinci-003'
 			])
 		) {
 			return fail(400, { error: 'Choose a valid model' });

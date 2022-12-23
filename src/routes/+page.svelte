@@ -34,7 +34,7 @@
 				<option value="text-babbage-001">Babbage</option>
 				<option value="text-babbage-002">Babbage (Technical)</option>
 				<option value="text-curie-001">Curie</option>
-				<option selected value="text-davinci-002">Davinci</option>
+				<option selected value="text-davinci-003">Davinci</option>
 			</select>
 		</div>
 

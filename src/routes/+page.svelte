@@ -1,3 +1,10 @@
+<script>
+	import { enhance } from '$app/forms';
+
+	/** @type {import('./$types').PageData} */ export let data;
+	/** @type {import('./$types').ActionData} */ export let form;
+</script>
+
 <nav class="navbar sticky-top bg-body shadow-sm">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="/">MTG Sorcerer</a>
@@ -27,7 +34,7 @@
 	</section>
 	<section class="mb-3">
 		<label class="form-label" for="model">Model:</label>
-		<form id="form">
+		<form method="POST" id="form">
 			<div class="mb-3">
 				<select class="form-select" id="model" name="model">
 					<option disabled value="ada">Ada</option>
@@ -39,13 +46,20 @@
 			</div>
 
 			<div class="mb-3">
-				<label class="form-label" for="prompt">Decklist:</label>
-				<textarea class="form-control" id="prompt" name="prompt" rows="10" />
+				<label class="form-label" for="decklist">Decklist:</label>
+				<textarea class="form-control" id="decklist" name="decklist" rows="10" />
 			</div>
 
 			<button class="btn btn-primary" type="submit">Generate response</button>
 		</form>
 	</section>
 
-	<section class="mb-3" id="response" style="white-space: pre-wrap; font-family: inherit" />
+	<section class="mb-3" id="response" style="white-space: pre-wrap; font-family: inherit">
+		{#if form?.completion}
+			<p>{form?.completion}</p>
+		{/if}
+		{#if form?.error}
+			<p>{form?.error}</p>
+		{/if}
+	</section>
 </main>

@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
+	import type { ActionData } from './$types';
 	import { enhance } from '$app/forms';
 
-	/** @type {import('./$types').PageData} */ export let data;
-	/** @type {import('./$types').ActionData} */ export let form;
+	export let form: ActionData;
 </script>
 
 <nav class="navbar sticky-top bg-body shadow-sm">
@@ -34,7 +34,7 @@
 	</section>
 	<section class="mb-3">
 		<label class="form-label" for="model">Model:</label>
-		<form method="POST" id="form">
+		<form method="POST" id="form" use:enhance>
 			<div class="mb-3">
 				<select class="form-select" id="model" name="model">
 					<option disabled value="ada">Ada</option>

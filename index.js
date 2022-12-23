@@ -3,19 +3,37 @@ import fetch from "node-fetch";
 import dotenv from "dotenv";
 import cors from "cors";
 import helmet from "helmet";
+import rateLimit from "express-rate-limit";
 
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
 
+// Limit requests to 100 per day
+const rateLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000, // 60 minutes
+  max: 100, // Limit each IP to 100 requests per `window` (here, per 60 minutes)
+  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+  message: "Too many requests, please try again later",
+});
+
+// Limit requests to once every 30 seconds
+const noSpam = rateLimit({
+  windowMs: 30 * 1000, // 30 seconds
+  max: 1,
+  message: "Too many requests, please try again later",
+});
+
 app.use(helmet());
+app.use("/api", rateLimiter);
 app.use(cors());
 app.use(express.static("public"));
 app.use(express.json());
 
 // API route
-app.post("/api/v1/completions", async (req, res) => {
+app.post("/api/v1/completions", noSpam, async (req, res) => {
   const { model, prompt } = req.body;
 
   if (!model || !prompt) {

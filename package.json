@@ -14,11 +14,11 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-rate-limit": "^6.7.0",
+    "express-validator": "^6.14.2",
     "helmet": "^6.0.1",
     "hpp": "^0.2.3",
     "morgan": "^1.10.0",
     "node-fetch": "^3.3.0",
-    "nodemon": "^2.0.20",
-    "yup": "^0.32.11"
+    "nodemon": "^2.0.20"
   }
 }

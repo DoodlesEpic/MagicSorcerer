@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
-import yup from "yup";
+import { body, validationResult } from "express-validator";
 import morgan from "morgan";
 import hpp from "hpp";
 
@@ -29,20 +29,6 @@ const noSpam = rateLimit({
   message: "Too many requests, please try again later",
 });
 
-const schema = yup.object().shape({
-  model: yup
-    .string()
-    .oneOf([
-      "ada",
-      "text-babbage-001",
-      "text-babbage-002",
-      "text-curie-001",
-      "text-davinci-002",
-    ])
-    .required(),
-  prompt: yup.string().min(100).max(10000).required(),
-});
-
 app.use(morgan("combined")); // logs HTTP requests to stdout
 app.use(helmet());
 app.use("/api", rateLimiter);
@@ -50,10 +36,37 @@ app.use(cors());
 app.use(express.static("public"));
 app.use(express.json());
 app.use(hpp());
+
 // API route
-app.post("/api/v1/completions", noSpam, async (req, res) => {
-  try {
-    const { model, prompt } = await schema.validate(req.body);
+app.post(
+  "/api/v1/completions",
+  noSpam,
+  body("model")
+    .isIn([
+      "ada",
+      "text-babbage-001",
+      "text-babbage-002",
+      "text-curie-001",
+      "text-davinci-002",
+    ])
+    .withMessage("Invalid model"),
+  body("prompt")
+    .isLength({ min: 100, max: 10000 })
+    .withMessage("Decklist must be between 100 and 10000 characters")
+    .trim()
+    .escape(),
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).send({
+        error: errors
+          .array()
+          .map((error) => error.msg)
+          .join(". "),
+      });
+    }
+
+    const { model, prompt } = req.body;
 
     const response = await fetch("https://api.openai.com/v1/completions", {
       method: "POST",
@@ -76,12 +89,8 @@ app.post("/api/v1/completions", noSpam, async (req, res) => {
     const data = await response.json();
     const completion = data.choices[0].text;
     res.send({ completion });
-  } catch (error) {
-    return res.status(400).send({
-      error: error.message[0].toUpperCase() + error.message.slice(1),
-    });
   }
-});
+);
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);

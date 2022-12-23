@@ -6,6 +6,7 @@ import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 import yup from "yup";
 import morgan from "morgan";
+import hpp from "hpp";
 
 dotenv.config();
 
@@ -48,7 +49,7 @@ app.use("/api", rateLimiter);
 app.use(cors());
 app.use(express.static("public"));
 app.use(express.json());
-
+app.use(hpp());
 // API route
 app.post("/api/v1/completions", noSpam, async (req, res) => {
   try {

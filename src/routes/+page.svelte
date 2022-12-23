@@ -2,7 +2,6 @@
 	import type { ActionData } from './$types';
 	import { enhance } from '$app/forms';
 
-	export const prerender = true;
 	export let form: ActionData;
 </script>
 

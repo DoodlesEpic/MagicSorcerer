@@ -2,7 +2,7 @@
 	export const prerender = true;
 </script>
 
-<main class="container">
+<section class="mb-3">
 	<section class="mb-5">
 		<h1 class="display-2">MTG Sorcerer</h1>
 		<p>AI-powered netdecking</p>
@@ -31,4 +31,4 @@
 	</section>
 
 	<a href="/app" class="btn btn-primary">Try now</a>
-</main>
+</section>

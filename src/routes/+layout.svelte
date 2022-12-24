@@ -1,5 +1,7 @@
 <script>
 	import '../app.scss';
+	import { signIn, signOut } from '@auth/sveltekit/client';
+	import { page } from '$app/stores';
 </script>
 
 <svelte:head>
@@ -13,6 +15,13 @@
 <nav class="navbar sticky-top bg-body shadow-sm">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="/">MTG Sorcerer</a>
+		{#if $page.data.session}
+			<button class="btn btn-danger shadow" on:click={() => signOut()}>Sign out</button>
+		{:else}
+			<button class="btn btn-dark shadow" on:click={() => signIn('github')}
+				>Sign In with GitHub</button
+			>
+		{/if}
 	</div>
 </nav>
 

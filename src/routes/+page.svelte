@@ -4,7 +4,7 @@
 
 <section class="mb-3">
 	<section class="mb-5">
-		<h1 class="display-2">MTG Sorcerer</h1>
+		<h1 class="display-1">MTG Sorcerer</h1>
 		<p>AI-powered netdecking</p>
 	</section>
 	<section class="mb-4">
@@ -30,5 +30,5 @@
 		</p>
 	</section>
 
-	<a href="/app" class="btn btn-primary">Try now</a>
+	<a href="/app" class="btn btn-primary btn-lg">Try now!</a>
 </section>

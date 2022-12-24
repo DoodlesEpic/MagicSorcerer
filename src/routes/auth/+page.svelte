@@ -3,7 +3,7 @@
 	import { page } from '$app/stores';
 </script>
 
-<h1>SvelteKit Auth</h1>
+<h1 class="display-4">MTG Sorcerer</h1>
 <p>
 	{#if $page.data.session}
 		{#if $page.data.session.user?.image}
@@ -15,7 +15,7 @@
 		</p>
 		<button class="btn btn-danger shadow" on:click={() => signOut()}>Sign out</button>
 	{:else}
-		<p class="notSignedInText">You are not signed in</p>
+		<p class="notSignedInText">You are not signed in. Login to access the web app.</p>
 		<button class="btn btn-dark shadow" on:click={() => signIn('github')}
 			>Sign In with GitHub</button
 		>

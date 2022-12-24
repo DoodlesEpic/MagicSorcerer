@@ -1,7 +1,15 @@
-import { fail } from '@sveltejs/kit';
-import type { Actions } from './$types';
+import { fail, redirect } from '@sveltejs/kit';
+import type { Actions, PageLoad } from './$types';
 import { API_KEY } from '$env/static/private';
 import validator from 'validator';
+
+export const load: PageLoad = async ({ parent }) => {
+	const { session } = await parent();
+	if (!session?.user) {
+		throw redirect(302, '/auth');
+	}
+	return {};
+};
 
 export const actions: Actions = {
 	default: async ({ request }) => {

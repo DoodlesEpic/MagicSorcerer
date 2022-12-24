@@ -1,67 +1,34 @@
 <script lang="ts">
-	import type { ActionData } from './$types';
-	import { enhance } from '$app/forms';
-
-	export let form: ActionData;
+	export const prerender = true;
 </script>
 
-<section class="mb-3">
-	<p>
-		Welcome to Magic the Gathering Sorcerer. The website uses AI to provide suggestions to help you
-		improve your Magic: The Gathering decklists. Whether you're a seasoned pro or a newcomer to the
-		game, our AI can help you identify combos, understand your deck's strengths and weaknesses, and
-		make informed decisions about which cards to add or remove. Our user-friendly interface and
-		accessible language make it easy for any Magic player to benefit from our AI's expert insights.
-	</p>
-	<ul>
-		<li>Ada: A state-of-the-art language model that can generate human-like text.</li>
-		<li>
-			Babbage: A language model that can answer questions and provide information on a wide range of
-			topics.
-		</li>
-		<li>
-			Curie: A language model that can generate text with a sense of curiosity and playfulness.
-		</li>
-		<li>Davinci: A language model that can perform translation and summarization tasks.</li>
-	</ul>
-</section>
-<section class="mb-3">
-	<form method="POST" id="form" use:enhance>
-		<div class="row mb-3">
-			<div class="col">
-				<label class="form-label" for="model">Model:</label>
-				<select class="form-select" id="model" name="model">
-					<option selected value="text-davinci-003">Davinci</option>
-					<option value="text-curie-001">Curie</option>
-					<option value="text-babbage-001">Babbage</option>
-					<option disabled value="ada">Ada</option>
-				</select>
-			</div>
-			<div class="col">
-				<label class="form-label" for="format">Game format:</label>
-				<select class="form-select" id="format" name="format">
-					<option selected value="commander">Commander</option>
-					<option value="standard">Standard</option>
-					<option value="modern">Modern</option>
-					<option value="historic">Historic</option>
-				</select>
-			</div>
-		</div>
+<main class="container">
+	<section class="mb-5">
+		<h1 class="display-2">MTG Sorcerer</h1>
+		<p>AI-powered netdecking</p>
+	</section>
+	<section class="mb-4">
+		<h2 class="display-6">What is MTG sorcerer?</h2>
+		<p>Simply put it is a website that uses AI to improve your Magic the Gathering decklists.</p>
+		<p>
+			By analyzing the cards in your deck, MTG sorcerer suggests new cards that you might want to
+			consider adding or removing in order to make your deck more powerful and effective. Whether
+			you're a seasoned pro or new to the game, MTG sorcerer can help you take your deck to the next
+			level. Just input your decklist and let the AI do the rest!
+		</p>
+	</section>
+	<section class="mb-4">
+		<h2 class="display-6">Why AI for netdecking?</h2>
+		<p>
+			Magic the Gathering has thousands of cards, this means that there are potentially millions of
+			combinations and permutations of cards that can be used in a deck. AI can help sort through
+			these options and make suggestions for cards to add or remove from a deck in order to improve
+			its power and efficiency. Additionally, AI can analyze the current metagame and make
+			recommendations based on what is currently popular and successful in competitive play,
+			allowing players to stay up to date and competitive in the ever-changing world of Magic the
+			Gathering.
+		</p>
+	</section>
 
-		<div class="mb-3">
-			<label class="form-label" for="decklist">Decklist:</label>
-			<textarea class="form-control" id="decklist" name="decklist" rows="10" />
-		</div>
-
-		<button class="btn btn-primary" type="submit">Generate response</button>
-	</form>
-</section>
-
-<section class="mb-3" id="response" style="white-space: pre-wrap; font-family: inherit">
-	{#if form?.completion}
-		<p>{form?.completion}</p>
-	{/if}
-	{#if form?.error}
-		<p>{form?.error}</p>
-	{/if}
-</section>
+	<a href="/app" class="btn btn-primary">Try now</a>
+</main>

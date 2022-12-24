@@ -26,15 +26,26 @@
 	</ul>
 </section>
 <section class="mb-3">
-	<label class="form-label" for="model">Model:</label>
 	<form method="POST" id="form" use:enhance>
-		<div class="mb-3">
-			<select class="form-select" id="model" name="model">
-				<option disabled value="ada">Ada</option>
-				<option value="text-babbage-001">Babbage</option>
-				<option value="text-curie-001">Curie</option>
-				<option selected value="text-davinci-003">Davinci</option>
-			</select>
+		<div class="row mb-3">
+			<div class="col">
+				<label class="form-label" for="model">Model:</label>
+				<select class="form-select" id="model" name="model">
+					<option selected value="text-davinci-003">Davinci</option>
+					<option value="text-curie-001">Curie</option>
+					<option value="text-babbage-001">Babbage</option>
+					<option disabled value="ada">Ada</option>
+				</select>
+			</div>
+			<div class="col">
+				<label class="form-label" for="format">Game format:</label>
+				<select class="form-select" id="format" name="format">
+					<option selected value="commander">Commander</option>
+					<option value="standard">Standard</option>
+					<option value="modern">Modern</option>
+					<option value="historic">Historic</option>
+				</select>
+			</div>
 		</div>
 
 		<div class="mb-3">

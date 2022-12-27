@@ -5,8 +5,8 @@ import { redirect, type Handle } from '@sveltejs/kit';
 import { sequence } from '@sveltejs/kit/hooks';
 
 async function authorization({ event, resolve }) {
-	// Protect any routes under /authenticated
-	if (event.url.pathname.startsWith('/adsda')) {
+	// Protect any routes under /app
+	if (event.url.pathname.startsWith('/app')) {
 		const session = await event.locals.getSession();
 		if (!session) {
 			throw redirect(303, '/auth');

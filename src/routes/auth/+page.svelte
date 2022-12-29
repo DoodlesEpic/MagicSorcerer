@@ -20,7 +20,7 @@
 			<button class="btn btn-dark shadow my-2 mx-auto" on:click={() => signIn('github')}
 				>Sign In with GitHub</button
 			>
-			<button class="btn btn-primary shadow my-2 mx-auto" on:click={() => signIn('discord')}
+			<button class="btn btn-purple shadow my-2 mx-auto" on:click={() => signIn('discord')}
 				>Sign In with Discord</button
 			>
 		</div>

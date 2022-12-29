@@ -30,5 +30,5 @@
 		</p>
 	</section>
 
-	<a href="/app" class="btn btn-primary btn-lg">Try now!</a>
+	<a href="/app" class="btn btn-primary btn-lg shadow">Try now!</a>
 </section>

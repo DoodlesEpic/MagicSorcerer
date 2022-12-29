@@ -18,9 +18,7 @@
 		{#if $page.data.session}
 			<button class="btn btn-danger shadow" on:click={() => signOut()}>Sign out</button>
 		{:else}
-			<button class="btn btn-dark shadow" on:click={() => signIn('github')}
-				>Sign In with GitHub</button
-			>
+			<a href="/auth" class="btn btn-primary shadow">Sign In</a>
 		{/if}
 	</div>
 </nav>

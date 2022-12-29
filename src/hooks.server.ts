@@ -1,6 +1,8 @@
 import { SvelteKitAuth } from '@auth/sveltekit';
 import GitHub from '@auth/core/providers/github';
+import Discord from '@auth/core/providers/discord';
 import { GITHUB_ID, GITHUB_SECRET } from '$env/static/private';
+import { DISCORD_ID, DISCORD_SECRET } from '$env/static/private';
 import { redirect, type Handle } from '@sveltejs/kit';
 import { sequence } from '@sveltejs/kit/hooks';
 
@@ -22,7 +24,13 @@ async function authorization({ event, resolve }) {
 
 export const handle: Handle = sequence(
 	SvelteKitAuth({
-		providers: [GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET })]
+		providers: [
+			GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET }),
+			Discord({
+				clientId: DISCORD_ID,
+				clientSecret: DISCORD_SECRET
+			})
+		]
 	}),
 	authorization
 );

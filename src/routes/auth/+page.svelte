@@ -23,6 +23,16 @@
 			<button class="btn btn-purple shadow my-2 mx-auto" on:click={() => signIn('discord')}
 				>Sign In with Discord</button
 			>
+
+			<form method="POST" id="form" action="/auth/signin/email">
+				<!-- <input name="csrfToken" type="hidden" value={csrfToken} /> -->
+				<label>
+					Email address
+					<input type="email" id="email" name="email" />
+				</label>
+				<button class="btn btn-primary shadow my-2 mx-auto" type="submit">Sign In with Email</button
+				>
+			</form>
 		</div>
 	{/if}
 </section>

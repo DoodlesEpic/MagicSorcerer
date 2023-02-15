@@ -28,13 +28,9 @@ OpenAI API key (sign up for one at https://beta.openai.com/).
 
 ## Technologies Used
 
-Node.js
-
-Express
-
-OpenAI API
-
-HTML/CSS/JavaScript
+- SvelteKit
+- Bootstrap
+- OpenAI API
 
 ## Demo
 

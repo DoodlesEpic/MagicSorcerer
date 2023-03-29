@@ -1,7 +1,3 @@
-<script lang="ts">
-	export const prerender = true;
-</script>
-
 <section class="mb-3">
 	<section class="mb-5">
 		<h1 class="display-1">MTG Sorcerer</h1>

@@ -5,53 +5,34 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@auth/core@npm:0.2.2":
-  version: 0.2.2
-  resolution: "@auth/core@npm:0.2.2"
+"@auth/core@npm:0.5.1":
+  version: 0.5.1
+  resolution: "@auth/core@npm:0.5.1"
   dependencies:
-    "@panva/hkdf": 1.0.2
+    "@panva/hkdf": ^1.0.4
     cookie: 0.5.0
-    jose: 4.11.1
-    oauth4webapi: 2.0.5
+    jose: ^4.11.1
+    oauth4webapi: ^2.0.6
     preact: 10.11.3
     preact-render-to-string: 5.2.3
   peerDependencies:
-    nodemailer: 6.8.0
+    nodemailer: ^6.8.0
   peerDependenciesMeta:
     nodemailer:
       optional: true
-  checksum: 52f2143c5eff3dd5634d0fffcfcde04b6f8e4fdfdc2d484c580865d215aaf9124a573bea0b284916a923c6c036e086de960084881075de152ec4fc6b3c2b27e2
+  checksum: b50049028202b363d87121e58b80d8c60c609bb428f167ecba6e105c1c3a958105f5fa8afecf51fe7798ea956b9e13882c6dd1e0586f2e41b312f4c8e318f5cb
   languageName: node
   linkType: hard
 
-"@auth/core@npm:0.2.3":
-  version: 0.2.3
-  resolution: "@auth/core@npm:0.2.3"
+"@auth/sveltekit@npm:0.3.0":
+  version: 0.3.0
+  resolution: "@auth/sveltekit@npm:0.3.0"
   dependencies:
-    "@panva/hkdf": 1.0.2
-    cookie: 0.5.0
-    jose: 4.11.1
-    oauth4webapi: 2.0.5
-    preact: 10.11.3
-    preact-render-to-string: 5.2.3
-  peerDependencies:
-    nodemailer: 6.8.0
-  peerDependenciesMeta:
-    nodemailer:
-      optional: true
-  checksum: 0a110a93dbd84a77b86e5cc1d2da87d341cacf6cafa98df9a389496e561901fadba03673051c5d274aad27d9a002b7a5a620cba0c8dd3d06adc0b9ebb0deb669
-  languageName: node
-  linkType: hard
-
-"@auth/sveltekit@npm:0.1.10":
-  version: 0.1.10
-  resolution: "@auth/sveltekit@npm:0.1.10"
-  dependencies:
-    "@auth/core": 0.2.2
+    "@auth/core": 0.5.1
   peerDependencies:
     "@sveltejs/kit": ^1.0.0
     svelte: ^3.54.0
-  checksum: ffe7e5029a166c4cd0b6cba558b208d506994414eb88f3974a523d1ecda9c838720d73d92133cee0b8908d81752b90ef5df6bc9e1e8cce8e21701bce4e5c5541
+  checksum: e366c6f6fc1d1e84422bdef4a3c9b395f1afdcaf5f10d399f60909fd86e24433aeb3556290753706bad2fde9b7cec3f09def56cb6d4dfd8024280bc757201926
   languageName: node
   linkType: hard
 
@@ -354,10 +335,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@panva/hkdf@npm:1.0.2":
-  version: 1.0.2
-  resolution: "@panva/hkdf@npm:1.0.2"
-  checksum: 75183b4d5ea816ef516dcea70985c610683579a9e2ac540c2d59b9a3ed27eedaff830a43a1c43c1683556a457c92ac66e09109ee995ab173090e4042c4c4bb03
+"@panva/hkdf@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "@panva/hkdf@npm:1.0.4"
+  checksum: d93b511eba76f5f1f1525834c3effb86e236e6a7d08d0abc067075694c6814909e172b7bed94b9eaeceb074306a6edd7981eb6a2a46922dd36b2f3d30ee9764e
   languageName: node
   linkType: hard
 
@@ -368,7 +349,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@popperjs/core@npm:^2.11.5":
+"@popperjs/core@npm:^2.11.7":
   version: 2.11.7
   resolution: "@popperjs/core@npm:2.11.7"
   checksum: 5b6553747899683452a1d28898c1b39173a4efd780e74360bfcda8eb42f1c5e819602769c81a10920fc68c881d07fb40429604517d499567eac079cfa6470f19
@@ -443,18 +424,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-auto@npm:^1.0.0":
-  version: 1.0.3
-  resolution: "@sveltejs/adapter-auto@npm:1.0.3"
+"@sveltejs/adapter-auto@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@sveltejs/adapter-auto@npm:2.0.0"
   dependencies:
     import-meta-resolve: ^2.2.0
   peerDependencies:
     "@sveltejs/kit": ^1.0.0
-  checksum: 42ef7dc51b28290977210860ece8e58cafd737970091f69bc053b55e1195b8c61cb285f05cae4316bd6c12f333702d166790271730c60b71c2e95392789c73fc
+  checksum: 7feeb24f5253b3ec4768c130f3498614e26d146e5b45560d5f3f8e3345a821f1c24fff578348fd756625af484f5b1079d33f6ecd1d43d395a192d2d193b5ab0f
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-node@npm:^1.0.0":
+"@sveltejs/adapter-node@npm:^1.2.3":
   version: 1.2.3
   resolution: "@sveltejs/adapter-node@npm:1.2.3"
   dependencies:
@@ -468,7 +449,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:^1.0.0":
+"@sveltejs/kit@npm:^1.14.0":
   version: 1.14.0
   resolution: "@sveltejs/kit@npm:1.14.0"
   dependencies:
@@ -560,14 +541,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/validator@npm:^13.7.10":
+"@types/validator@npm:^13.7.14":
   version: 13.7.14
   resolution: "@types/validator@npm:13.7.14"
   checksum: 51bd82cd08aa7d8006f97357b5768a77bfca30e4823b5962e63bbf6446f46b5afe236bec1089148a15fd04cc0a748a10e2dd1a559f07163ec5e4e9fb5581896e
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.47.1":
+"@typescript-eslint/eslint-plugin@npm:^5.57.0":
   version: 5.57.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.57.0"
   dependencies:
@@ -591,7 +572,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.47.1":
+"@typescript-eslint/parser@npm:^5.57.0":
   version: 5.57.0
   resolution: "@typescript-eslint/parser@npm:5.57.0"
   dependencies:
@@ -826,7 +807,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap@npm:^5.2.0":
+"bootstrap@npm:^5.2.3":
   version: 5.2.3
   resolution: "bootstrap@npm:5.2.3"
   peerDependencies:
@@ -1219,7 +1200,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^8.5.0":
+"eslint-config-prettier@npm:^8.8.0":
   version: 8.8.0
   resolution: "eslint-config-prettier@npm:8.8.0"
   peerDependencies:
@@ -1267,7 +1248,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.28.0":
+"eslint@npm:^8.37.0":
   version: 8.37.0
   resolution: "eslint@npm:8.37.0"
   dependencies:
@@ -1862,10 +1843,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jose@npm:4.11.1":
-  version: 4.11.1
-  resolution: "jose@npm:4.11.1"
-  checksum: cd15cba258d0fd20f6168631ce2e94fda8442df80e43c1033c523915cecdf390a1cc8efe0eab0c2d65935ca973d791c668aea80724d2aa9c2879d4e70f3081d7
+"jose@npm:^4.11.1":
+  version: 4.13.1
+  resolution: "jose@npm:4.13.1"
+  checksum: 89be959573beee69bd443493887d78799fd42340b45afa2c6681beda30314bcdfa5575f6977203c199e4c3e0ec2fc18d3c94745e7f0d59db51dedfae0efee63d
   languageName: node
   linkType: hard
 
@@ -2188,29 +2169,29 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "mtg-sorcerer@workspace:."
   dependencies:
-    "@auth/core": 0.2.3
-    "@auth/sveltekit": 0.1.10
-    "@popperjs/core": ^2.11.5
-    "@sveltejs/adapter-auto": ^1.0.0
-    "@sveltejs/adapter-node": ^1.0.0
-    "@sveltejs/kit": ^1.0.0
-    "@types/validator": ^13.7.10
-    "@typescript-eslint/eslint-plugin": ^5.47.1
-    "@typescript-eslint/parser": ^5.47.1
-    bootstrap: ^5.2.0
-    eslint: ^8.28.0
-    eslint-config-prettier: ^8.5.0
+    "@auth/core": 0.5.1
+    "@auth/sveltekit": 0.3.0
+    "@popperjs/core": ^2.11.7
+    "@sveltejs/adapter-auto": ^2.0.0
+    "@sveltejs/adapter-node": ^1.2.3
+    "@sveltejs/kit": ^1.14.0
+    "@types/validator": ^13.7.14
+    "@typescript-eslint/eslint-plugin": ^5.57.0
+    "@typescript-eslint/parser": ^5.57.0
+    bootstrap: ^5.2.3
+    eslint: ^8.37.0
+    eslint-config-prettier: ^8.8.0
     eslint-plugin-svelte3: ^4.0.0
-    prettier: ^2.8.0
-    prettier-plugin-svelte: ^2.8.1
-    sass: ^1.53.0
-    svelte: ^3.54.0
-    svelte-check: ^3.0.1
-    svelte-preprocess: ^5.0.0
-    tslib: ^2.4.1
-    typescript: ^4.9.3
-    validator: ^13.7.0
-    vite: ^4.0.0
+    prettier: ^2.8.7
+    prettier-plugin-svelte: ^2.10.0
+    sass: ^1.60.0
+    svelte: ^3.57.0
+    svelte-check: ^3.1.4
+    svelte-preprocess: ^5.0.3
+    tslib: ^2.5.0
+    typescript: ^5.0.2
+    validator: ^13.9.0
+    vite: ^4.2.1
   languageName: unknown
   linkType: soft
 
@@ -2294,10 +2275,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"oauth4webapi@npm:2.0.5":
-  version: 2.0.5
-  resolution: "oauth4webapi@npm:2.0.5"
-  checksum: 32d0cb7b1cca42d51dfb88075ca2d69fe33172a807e8ea50e317d17cab3bc80588ab8ebcb7eb4600c371a70af4674595b4b341daf6f3a655f1efa1ab715bb6c9
+"oauth4webapi@npm:^2.0.6":
+  version: 2.2.0
+  resolution: "oauth4webapi@npm:2.2.0"
+  checksum: c89fa874fa7afb47a790cc215b44ae63dc9350bde2685d91166b6a8ef9b408ccea39117171d7ce62392938baf7972937ad1f3b1d70f70c2ee40e3bdfb7ae1dd9
   languageName: node
   linkType: hard
 
@@ -2445,7 +2426,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-svelte@npm:^2.8.1":
+"prettier-plugin-svelte@npm:^2.10.0":
   version: 2.10.0
   resolution: "prettier-plugin-svelte@npm:2.10.0"
   peerDependencies:
@@ -2455,7 +2436,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.8.0":
+"prettier@npm:^2.8.7":
   version: 2.8.7
   resolution: "prettier@npm:2.8.7"
   bin:
@@ -2649,7 +2630,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.53.0":
+"sass@npm:^1.60.0":
   version: 1.60.0
   resolution: "sass@npm:1.60.0"
   dependencies:
@@ -2854,7 +2835,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte-check@npm:^3.0.1":
+"svelte-check@npm:^3.1.4":
   version: 3.1.4
   resolution: "svelte-check@npm:3.1.4"
   dependencies:
@@ -2883,7 +2864,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte-preprocess@npm:^5.0.0":
+"svelte-preprocess@npm:^5.0.0, svelte-preprocess@npm:^5.0.3":
   version: 5.0.3
   resolution: "svelte-preprocess@npm:5.0.3"
   dependencies:
@@ -2929,7 +2910,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte@npm:^3.54.0":
+"svelte@npm:^3.57.0":
   version: 3.57.0
   resolution: "svelte@npm:3.57.0"
   checksum: ae8e807c583935c5adb4e921789ab1339a5c7af5102388a7101d3258dc4af7dbe6579358d423e10622177d78ad9218f654ae98234150e5abe084ad26b4d7e319
@@ -2990,7 +2971,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.4.1":
+"tslib@npm:^2.5.0":
   version: 2.5.0
   resolution: "tslib@npm:2.5.0"
   checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1
@@ -3024,7 +3005,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.9.3, typescript@npm:^4.9.4":
+"typescript@npm:^4.9.4":
   version: 4.9.5
   resolution: "typescript@npm:4.9.5"
   bin:
@@ -3034,13 +3015,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.9.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.9.4#~builtin<compat/typescript>":
+"typescript@npm:^5.0.2":
+  version: 5.0.2
+  resolution: "typescript@npm:5.0.2"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: bef1dcd166acfc6934b2ec4d72f93edb8961a5fab36b8dd2aaf6f4f4cd5c0210f2e0850aef4724f3b4913d5aef203a94a28ded731b370880c8bcff7e4ff91fc1
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@^4.9.4#~builtin<compat/typescript>":
   version: 4.9.5
   resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: ab417a2f398380c90a6cf5a5f74badd17866adf57f1165617d6a551f059c3ba0a3e4da0d147b3ac5681db9ac76a303c5876394b13b3de75fdd5b1eaa06181c9d
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@^5.0.2#~builtin<compat/typescript>":
+  version: 5.0.2
+  resolution: "typescript@patch:typescript@npm%3A5.0.2#~builtin<compat/typescript>::version=5.0.2&hash=85af82"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: b63cb742fbb9aeb3085e002ad8f10d5fd963606aa4d6b3b65b4e76c396ff09739f03b5dbae08e1698c3bce9d5619d3f67aeb7ee470ed4016bd345b3cfe37b54a
   languageName: node
   linkType: hard
 
@@ -3087,14 +3088,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"validator@npm:^13.7.0":
+"validator@npm:^13.9.0":
   version: 13.9.0
   resolution: "validator@npm:13.9.0"
   checksum: e2c936f041f61faa42bafd17c6faddf939498666cd82e88d733621c286893730b008959f4cb12ab3e236148a4f3805c30b85e3dcf5e0efd8b0cbcd36c02bfc0c
   languageName: node
   linkType: hard
 
-"vite@npm:^4.0.0":
+"vite@npm:^4.2.1":
   version: 4.2.1
   resolution: "vite@npm:4.2.1"
   dependencies:

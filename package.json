@@ -41,5 +41,6 @@
 	"dependencies": {
 		"@auth/core": "0.2.3",
 		"@auth/sveltekit": "0.1.10"
-	}
+	},
+	"packageManager": "yarn@3.5.0"
 }

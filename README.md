@@ -35,4 +35,3 @@ OpenAI API key (sign up for one at https://beta.openai.com/).
 ## Demo
 
 ![Screenshot demo](https://user-images.githubusercontent.com/37254797/209268422-3e854027-860c-478d-adb6-862ff7e08e6c.png)
-

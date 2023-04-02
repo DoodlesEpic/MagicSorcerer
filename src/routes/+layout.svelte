@@ -1,6 +1,6 @@
 <script>
 	import '../app.scss';
-	import { signIn, signOut } from '@auth/sveltekit/client';
+	import { signOut } from '@auth/sveltekit/client';
 	import { page } from '$app/stores';
 </script>
 

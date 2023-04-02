@@ -5,6 +5,7 @@ import { GITHUB_ID, GITHUB_SECRET } from '$env/static/private';
 import { DISCORD_ID, DISCORD_SECRET } from '$env/static/private';
 import { redirect, type Handle } from '@sveltejs/kit';
 import { sequence } from '@sveltejs/kit/hooks';
+import type { Provider } from '@auth/core/providers';
 
 const authorization: Handle = async function ({ event, resolve }) {
 	// Protect any routes under /app
@@ -22,15 +23,15 @@ const authorization: Handle = async function ({ event, resolve }) {
 	return result;
 };
 
+const githubProvider = GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET }) as Provider;
+const discordProvider = Discord({
+	clientId: DISCORD_ID,
+	clientSecret: DISCORD_SECRET
+}) as Provider;
+
 export const handle: Handle = sequence(
 	SvelteKitAuth({
-		providers: [
-			GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET }),
-			Discord({
-				clientId: DISCORD_ID,
-				clientSecret: DISCORD_SECRET
-			})
-		]
+		providers: [githubProvider, discordProvider]
 	}),
 	authorization
 );

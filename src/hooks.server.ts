@@ -6,7 +6,7 @@ import { DISCORD_ID, DISCORD_SECRET } from '$env/static/private';
 import { redirect, type Handle } from '@sveltejs/kit';
 import { sequence } from '@sveltejs/kit/hooks';
 
-async function authorization({ event, resolve }) {
+const authorization: Handle = async function ({ event, resolve }) {
 	// Protect any routes under /app
 	if (event.url.pathname.startsWith('/app')) {
 		const session = await event.locals.getSession();
@@ -20,7 +20,7 @@ async function authorization({ event, resolve }) {
 		transformPageChunk: ({ html }) => html
 	});
 	return result;
-}
+};
 
 export const handle: Handle = sequence(
 	SvelteKitAuth({

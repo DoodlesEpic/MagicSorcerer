@@ -26,7 +26,7 @@ Easy to use interface, perfect for Magic the Gathering players of all skill leve
 
 Internet connection.
 
-OpenAI API key (sign up for one at https://beta.openai.com/).
+OpenAI API key (sign up for one at https://platform.openai.com/signup).
 
 ## Technologies Used
 

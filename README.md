@@ -4,6 +4,8 @@ Welcome to Magic the Gathering Sorcerer! Our AI-powered tool is designed to help
 
 ![Screenshot](https://user-images.githubusercontent.com/37254797/209266792-0e0cd6cc-93ac-4c0a-92e6-96a7b89075ed.png)
 
+Warning: The tool currently has to be self-hosted with your own OpenAI API key as I do not have the funds to keep paying for the API costs. The code will be updated regularly with new models, bug fixes, and general improvements despite this limitation.
+
 ## How to use
 
 Input your Magic the Gathering decklist in the provided field. Make sure to include all cards, including lands.

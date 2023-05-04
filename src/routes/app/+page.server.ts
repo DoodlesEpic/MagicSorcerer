@@ -10,17 +10,16 @@ export const actions: Actions = {
 		const decklist: string = validator.trim(formData.get('decklist') as string);
 		const format: string = validator.trim(formData.get('format') as string);
 
-		if (!validator.isLength(decklist, { min: 100, max: 10000 })) {
+		if (!validator.isLength(decklist, { min: 100, max: 10000 }))
 			return fail(400, { error: 'Insert a valid decklist' });
-		}
 
-		if (!validator.isIn(model, ['ada', 'text-babbage-001', 'text-curie-001', 'text-davinci-003'])) {
+		if (
+			!validator.isIn(model, ['davinci', 'text-davinci-002', 'text-davinci-003', 'gpt-3.5-turbo'])
+		)
 			return fail(400, { error: 'Choose a valid model' });
-		}
 
-		if (!validator.isIn(format, ['commander', 'standard', 'modern', 'historic'])) {
+		if (!validator.isIn(format, ['commander', 'standard', 'modern', 'historic']))
 			return fail(400, { error: 'Choose a valid format' });
-		}
 
 		const response = await fetch('https://api.openai.com/v1/completions', {
 			method: 'POST',
@@ -36,9 +35,7 @@ export const actions: Actions = {
 			})
 		});
 
-		if (!response.ok) {
-			return fail(400, { error: response.statusText });
-		}
+		if (!response.ok) return fail(400, { error: response.statusText });
 
 		const data = await response.json();
 		const completion = data.choices[0].text;

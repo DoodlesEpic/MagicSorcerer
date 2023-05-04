@@ -14,15 +14,16 @@
 		accessible language make it easy for any Magic player to benefit from our AI's expert insights.
 	</p>
 	<ul>
-		<li>Ada: A state-of-the-art language model that can generate human-like text.</li>
+		<li>Davinci: The most capable GPT3 model which can be finetuned.</li>
+		<li>Davinci 2: A GPT3.5 model that has been trained with supervised fine-tuning.</li>
 		<li>
-			Babbage: A language model that can answer questions and provide information on a wide range of
-			topics.
+			Davinci 3: The same GPT3.5 model but trained with reinforcement learning. Generally more
+			capable.
 		</li>
 		<li>
-			Curie: A language model that can generate text with a sense of curiosity and playfulness.
+			GPT 3.5 Turbo: A state-of-the-art language model that can generate human-like text and powers
+			ChatGPT.
 		</li>
-		<li>Davinci: A language model that can perform translation and summarization tasks.</li>
 	</ul>
 </section>
 <section class="mb-3">
@@ -31,10 +32,10 @@
 			<div class="col">
 				<label class="form-label" for="model">Model:</label>
 				<select class="form-select" id="model" name="model">
-					<option selected value="text-davinci-003">Davinci</option>
-					<option value="text-curie-001">Curie</option>
-					<option value="text-babbage-001">Babbage</option>
-					<option disabled value="ada">Ada</option>
+					<option selected value="gpt-3.5-turbo">GPT 3.5 Turbo</option>
+					<option value="text-davinci-003">Davinci 3</option>
+					<option value="text-davinci-002">Davinci 2</option>
+					<option value="davinci">Davinci</option>
 				</select>
 			</div>
 			<div class="col">
